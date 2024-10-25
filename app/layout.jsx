@@ -7,12 +7,12 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <body>
-        <Header />
-        <main>{children}</main>
-      </body>
-    </html>
-  );
+    return (
+        <html lang="en">
+                <body>
+                    <Header />
+                    <main>{children}</main>
+                </body>
+        </html>
+    );
 }
