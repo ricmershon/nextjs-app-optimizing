@@ -3,9 +3,14 @@ import { Suspense } from 'react';
 import Posts from '@/components/posts';
 import { getPosts } from '@/lib/data';
 
+export const metadata = {
+    title: 'Latest Posts',
+    description: 'Browse our latest posts'
+}
+
 async function LatestPosts() {
-  const latestPosts = await getPosts(2);
-  return <Posts posts={latestPosts} />;
+    const latestPosts = await getPosts(2);
+    return <Posts posts={latestPosts} />;
 }
 
 export default async function Home() {
