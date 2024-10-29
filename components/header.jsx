@@ -4,7 +4,6 @@ import Image from 'next/image';
 import logo from '@/assets/logo.png';
 
 export default function Header() {
-    console.log('^^^ LOGO ^^^', logo);
     return (
         <header id="main-header">
             <Link href="/">

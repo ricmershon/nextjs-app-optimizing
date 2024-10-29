@@ -3,6 +3,7 @@
 import { useOptimistic } from 'react';
 import Image from 'next/image';
 
+import { imageLoader } from '@/lib/utils';
 import { formatDate } from '@/lib/format';
 import LikeButton from './like-icon';
 import { togglePostLikeStatus } from '@/lib/actions';
@@ -11,7 +12,14 @@ function Post({ post, action }) {
     return (
         <article className="post">
             <div className="post-image">
-                <Image src={post.image} fill={true} alt={post.title} />
+                <Image
+                    loader={imageLoader}
+                    src={post.image}
+                    width={200}
+                    height={120}
+                    alt={post.title}
+                    quality={50}    // 0-100
+                />
             </div>
             <div className="post-content">
                 <header>
